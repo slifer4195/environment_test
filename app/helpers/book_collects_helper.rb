@@ -1,0 +1,2 @@
+module BookCollectsHelper
+end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Collectbooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @collectbooks.each do |collectbook| %>
+      <tr>
+        <td><%= collectbook.title %></td>
+        <td><%= collectbook.author %></td>
+        <td><%= collectbook.price %></td>
+        <td><%= collectbook.time %></td>
+        <td><%= link_to 'Show', collectbook %></td>
+        <td><%= link_to 'Edit', edit_collectbook_path(collectbook) %></td>
+        <td><%= link_to 'delete', delete_collectbook_path(collectbook) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Collectbook', new_collectbook_path %>

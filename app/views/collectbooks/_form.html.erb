@@ -1,0 +1,37 @@
+<%= form_with(model: collectbook) do |form| %>
+  <% if collectbook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(collectbook.errors.count, "error") %> prohibited this collectbook from being saved:</h2>
+
+      <ul>
+        <% collectbook.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.date_select :time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
