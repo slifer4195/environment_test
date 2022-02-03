@@ -1,0 +1,2 @@
+module CollectbooksHelper
+end
